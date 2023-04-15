@@ -11,5 +11,8 @@
     "prepack": "npm run build"
   },
   "description": "An npm package like `yes` that lives in its `package.json`",
+  "files": [
+    "test.sh"
+  ],
   "license": "GPL-3.0-or-later"
 }
