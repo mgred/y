@@ -1,0 +1,15 @@
+{
+  "name": "@mgred/y",
+  "version": "0.0.0",
+  "bin": "./y",
+  "scripts": {
+    "print": "echo 'while (true) if(!process.stdout.write(`${process.argv.slice(2).join(\" \") || \"y\"}\n`)) process.exit(0)'",
+    "start": "npm run build; ./y",
+    "build": "(echo '#!/usr/bin/env node'; npm run --silent print) > y && chmod +x y",
+    "test": "./y | ./test.sh",
+    "clean": "rm -rf ./y ./*.tgz",
+    "prepack": "npm run build"
+  },
+  "description": "An npm package like `yes` that lives in its `package.json`",
+  "license": "GPL-3.0-or-later"
+}
